@@ -1,6 +1,36 @@
+@font-face {
+  font-family: "Poppins";   /*Can be any text*/
+  src: local("Poppins"),
+    url("./fonts/Poppins-Black.ttf") format("ttf");
+  }
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0rem;
+    text-align: center;
+  }
+body{
+  font-family: "Poppins",Verdana;
+  background-image: url("./Images/Home.png");
+  background-size: cover;
+}
+.outletBox{
+  display: flex;
+  min-height: 90vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 100px;
+ background: none;
+}
+.image{
+  width:100%;
+}
+
+.LPHeading{
+  font-weight: 600;
+  font-family: sans-serif;
+}
+.LPimg{
+  width: 30%;
 }

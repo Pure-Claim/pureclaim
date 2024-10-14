@@ -1,0 +1,19 @@
+.VerificationMethods{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+}
+.cardContainer {
+    width: 100%;
+    display: flex;  
+    justify-content: center; 
+    margin-top: 2rem;
+    width: 100%;
+  }
+  .Heading {
+    font-size: 30px;
+    color:purple;
+    margin-top: 1.5rem auto;
+  }
+  
