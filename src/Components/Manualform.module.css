@@ -1,0 +1,73 @@
+.CheckClaims{
+    width: 100%;
+    display: flex;
+    height: 88vh;
+}
+.formBanner{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.inputBox{
+    margin-top: -5rem;
+    width: 45%;
+    background-color:#75347f7a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.logoImg{
+    width:100px;
+}
+.image{
+    width: 60%;
+}
+.BannerTitle{
+    font-weight: 500; 
+}
+.Tag{
+    font-size: 80px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    display: block;
+    margin-bottom: -20px;
+    margin-left: 80px;
+}
+.Title{
+    font-size: 30px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    display: block;
+    margin-left: 185px;
+}
+.FormBox{
+    width: 70%;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+}
+textarea{
+    margin: 10px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+}
+
+.Button{
+    width: 20%;
+    height: 40px;
+    background-color: aliceblue;
+    border-radius: 20px;
+    border: none;
+    align-self: flex-end;
+    margin-right: 100px;
+    cursor: pointer;
+}
+.Button:hover{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.516);
+    transition: 300ms ease-in-out;
+    font-weight: 500;
+}
+

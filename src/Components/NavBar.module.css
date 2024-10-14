@@ -10,10 +10,11 @@
 }
 .logo{
     width: 8%;
+   
 }
 .logoImg{
     width: 100%;
-
+    border-radius: 50%;
 }
 .navs{
     display: flex;

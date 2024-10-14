@@ -12,19 +12,19 @@ function ClaimCheckOptions() {
       path: "/ClaimCheckOptions/urlform",
       img: Vurl,
       head: "Url Verification",
-      text:"Verify the brand's claims by manually entering the ingredients and product details...",
+      text:"Paste the URL of the product page, and we'll cross-check the claims and ingredients automatically.",
     },
     {
       path: "/ClaimCheckOptions/Manualform",
       img: Vtext,
       head: "Manual Verification",
-      text:"Snap a picture of the product's packaging or label,for verification. Fast and simple!",
+      text:"Verify the brand's claims by manually entering the ingredients and product details...",
     },
     {
       path: "/ClaimCheckOptions/ImageForm",
       img: Vimage,
       head: "Image Verification",
-      text:"Paste the URL of the product page, and we'll cross-check the claims and ingredients automatically.",
+      text:"Snap a picture of the product's packaging or label,for verification. Fast and simple!",
     },
   ];
 
