@@ -1,4 +1,4 @@
-// import logo from "../Images/Logo.png";
+import logo from "../Images/Logo.png";
 import styles from "./NavBar.module.css";
 import { Link } from "react-router-dom";
 import { useLocation } from 'react-router-dom';
@@ -13,7 +13,8 @@ function NavBar() {
     }}>
       <div className={styles.navbar}>
         <div className={styles.logo}>
-          {/* <img src={logo} className={styles.logoImg}></img> */}
+          <img src={logo} className={styles.logoImg}></img>
+          <div>PureClaim</div>
         </div>
         <div className={styles.navs}>
             <Link  className={`${styles.links} ${styles.active} `} to="/">Home</Link>
