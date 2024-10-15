@@ -13,6 +13,7 @@ body{
   font-family: "Poppins",Verdana;
   background-image: url("./Images/Home.png");
   background-size: cover;
+  background-repeat: no-repeat;
 }
 .outletBox{
   display: flex;
