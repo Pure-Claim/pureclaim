@@ -14,7 +14,6 @@ function NavBar() {
       <div className={styles.navbar}>
         <div className={styles.logo}>
           <img src={logo} className={styles.logoImg}></img>
-          <div>PureClaim</div>
         </div>
         <div className={styles.navs}>
             <Link  className={`${styles.links} ${styles.active} `} to="/">Home</Link>
