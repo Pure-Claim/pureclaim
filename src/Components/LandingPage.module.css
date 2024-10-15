@@ -1,0 +1,23 @@
+.landing {
+  background-image: url(../Images/landingbg.png);
+  background-size: cover;
+  background-position: center;
+  height: 768px;
+}
+
+.button {
+  text-decoration: none;
+  border: 2px solid purple;
+  color:black;
+  padding: 10px 20px;
+  border-radius: 15px;
+  display: inline-block;
+  margin-top: 10px;
+  transition: transform 300ms ease-in-out;
+}
+
+.button:hover {
+    background-color: purple;
+    color: white;
+    transition: 600ms ease-in-out;
+}
