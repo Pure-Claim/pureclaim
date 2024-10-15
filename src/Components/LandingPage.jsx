@@ -54,14 +54,13 @@ function LandingPage() {
 
         <div
           className="w-100"
-          style={{ height: "75vh", backgroundColor: "rgb(128 0 128 / 13%)" }}
-        >
+          style={{ height: "75vh", backgroundColor: "rgb(128 0 128 / 13%)" }}>
           {" "}
           <div className="fs-3 fw-bold pt-5">FEATURES</div>
-          <div className="d-flex justify-content-evenly mt-4 w-75 mx-auto"> 
-            {
-              features.map(feature=><FeatureCard val={feature}/> )
-            } 
+          <div className="d-flex justify-content-evenly mt-4 w-75 mx-auto">
+            {features.map((feature) => (
+              <FeatureCard val={feature} />
+            ))}
           </div>
         </div>
       </div>
