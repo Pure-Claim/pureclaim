@@ -29,11 +29,14 @@ function Manualform() {
       .then((data) => {
         setIsLoading(false);
         console.log(data);
-        // if (data) {
-        //   navigate("/ClaimCheckOptions/Manualform/Output", {
-        //     state: { data: data },
-        //   });
-        // }
+        if (data) {
+          navigate("/ClaimCheckOptions/Manualform/Output", {
+            state: { data: data },
+          });
+        }
+      }).catch((error)=>{
+        console.log(error);
+        throw(error);
       });
   }
 

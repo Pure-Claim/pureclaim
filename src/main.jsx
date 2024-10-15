@@ -5,6 +5,7 @@ import App from "./App.jsx";
 import LandingPage from "./Components/LandingPage.jsx";
 import ClaimCheckOptions from "./Components/ClaimCheckOptions.jsx";
 import Manualform from "./Components/Manualform.jsx";
+import Output from "./Components/Output.jsx"
 const router = createBrowserRouter([
   {
     path: "/",
@@ -26,10 +27,10 @@ const router = createBrowserRouter([
       //   path:"/ClaimCheckOptions/ImageForm",
       //   element:<ImageForm/>,
       // },
-      // {
-      //   path:"/ClaimCheckOptions/Manualform/Output",
-      //   element:<Output/>,
-      // },
+      {
+        path:"/ClaimCheckOptions/Manualform/Output",
+        element:<Output/>,
+      },
     ],
   },
 ]);
