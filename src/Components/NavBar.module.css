@@ -1,12 +1,12 @@
-.navbar{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 5rem;
-    padding: 0px 30px;
-    z-index: 100;
-    justify-content: space-between;
-    background:none;
+.navbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  padding: 0px 30px;
+  z-index: 100;
+  justify-content: space-between;
+  background: none;
 }
 .logo{
     width: 4%;
@@ -14,30 +14,30 @@
     align-items: center;
    
 }
-.logoImg{
-    width: 100%;
-    border-radius: 50%;
+.logoImg {
+  width: 100%;
+  border-radius: 50%;
 }
-.navs{
-    display: flex;
-    width: 50%;
-    justify-content: space-between;
-    /* margin-left:23%; */
+.navs {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  /* margin-left:23%; */
 }
-.links{
-    text-decoration: none;
-    color:black;
-    padding: 10px 20px;
-    border-radius: 15px;
-    font-size: 12px;
+.links {
+  text-decoration: none;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 15px;
+  font-size: 12px;
 }
-.links:hover{
-        background-color: purple;
-        color: white;
-        transform:scaleX(2px);
-        transition: 300ms ease-in-out;
+.links:hover {
+  background-color: purple;
+  color: white;
+  transform: scaleX(2px);
+  transition: 300ms ease-in-out;
 }
-.active{
-    color: white;
-    background-color: purple;
+.active {
+  color: white;
+  background-color: purple;
 }
