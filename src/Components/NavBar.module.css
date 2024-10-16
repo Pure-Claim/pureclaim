@@ -8,10 +8,11 @@
   justify-content: space-between;
   background: none;
 }
-.logo {
-  width: 4%;
-  display: flex;
-  align-items: center;
+.logo{
+    width: 4%;
+    display: flex;
+    align-items: center;
+   
 }
 .logoImg {
   width: 100%;

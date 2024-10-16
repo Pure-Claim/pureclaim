@@ -37,10 +37,10 @@ function LandingPage() {
 
       <div className="bg-white">
         <div className=" w-50 mx-auto ">
-          <div className="fs-3 fw-bold">OUR OBJECTIVE</div>
-          <h4>"Trust What You Eat – Verify with Confidence!"</h4>
+          <div className="fs-3 w-100 text-center fw-bold">OUR OBJECTIVE</div>
+          <h4 className="text-center w-100">"Trust What You Eat – Verify with Confidence!"</h4>
         </div>
-        <div className="bg-white mx-auto w-75 mb-5">
+        <div className="bg-white mx-auto text-center w-75 mb-5">
           {" "}
           Empowering consumers to make informed, confident choices by providing
           an easy-to-use platform that verifies whether brand claims on edible
@@ -56,11 +56,11 @@ function LandingPage() {
           className="w-100"
           style={{ height: "75vh", backgroundColor: "rgb(128 0 128 / 13%)" }}>
           {" "}
-          <div className="fs-3 fw-bold pt-5">FEATURES</div>
-          <div className="d-flex justify-content-evenly mt-4 w-75 mx-auto">
-            {features.map((feature) => (
-              <FeatureCard val={feature} />
-            ))}
+          <div className="fs-3 fw-bold text-center pt-5">FEATURES</div>
+          <div className="d-flex justify-content-evenly mt-4 w-75 text-center mx-auto"> 
+            {
+              features.map(feature=><FeatureCard val={feature}/> )
+            } 
           </div>
         </div>
       </div>

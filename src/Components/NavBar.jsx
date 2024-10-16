@@ -12,7 +12,7 @@ function NavBar() {
       }}>
       <div className={styles.navbar}>
         <div className={styles.logo}>
-          <img src={logo} className={styles.logoImg} alt="Logo" />
+          <img src={logo} className={styles.logoImg}></img>
           <div className="fw-bold">PureClaim</div>
         </div>
         <div className={styles.navs}>
