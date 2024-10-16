@@ -1,0 +1,72 @@
+.ImageForm{
+    border-radius: 15px;
+    width: 40%;
+    min-height:300px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background-color: rgb(237, 166, 225);
+}
+.ImageUploadBox{
+    display: flex;
+}
+.MediaUploader{
+    border: 2px dashed rgb(225, 13, 190);
+    border-radius: 15px;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 500;
+}
+#claimsFileInput{
+    display: none;
+}
+
+.AddImg{
+    display: block;
+  margin: 0px auto;
+    width: 20%;
+}
+.EnterImgInput{
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(110, 5, 139, 0.148);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    text-align: center;
+}
+#IngredientsFileInput{
+    display: none;
+}
+.ImgAnalyzebtn{
+    border:none;
+    background-color: purple;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 2rem;
+    color: white;
+    font-size: 15px;
+}
+.ImgAnalyzebtn:hover{
+    box-shadow: 0px 0px 10px rgb(56, 1, 56);
+}
+.uploadBtn{
+    border:none;
+    background-color: purple;
+    padding: 8px 16px;
+    border-radius: 10px;
+    margin-top: 2rem;
+    color: white;
+    font-size: 10px;
+}
+.uploadBtn:hover{
+    box-shadow: 0px 0px 10px rgb(56, 1, 56);
+}
