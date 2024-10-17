@@ -6,7 +6,6 @@
 body{
   font-family: "Poppins",Verdana;
   background-color: rgb(244, 244, 244);
-  background-image: url("./Images/Home.png");
   background-size: cover;
 }
 .outletBox{

@@ -76,6 +76,11 @@
     background-color:rgb(4, 62, 119);
     color: white;
 }
+.submitBtn:hover{
+        box-shadow: 0px 0px 10px black;
+        transition: 400ms ease;
+        
+}
 .bannerimg{
     width: 20%;
     display: flex;
