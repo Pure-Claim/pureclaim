@@ -8,13 +8,8 @@ function NavBar() {
   // Check if the current route is "/"
   const isHome = location.pathname === "/";
   return (
-    <div style={{
-      backgroundColor:isHome?'white':'transparent'
-    }}>
       <div className={styles.navbar}>
-        <div className={styles.logo}>
-          <img src={logo} className={styles.logoImg}></img>
-        </div>
+       <p className={styles.PureClaim}>PureClaim</p>
         <div className={styles.navs}>
             <Link  className={`${styles.links} ${styles.active} `} to="/">Home</Link>
             <Link  className={styles.links} to="/">AboutUs</Link>
@@ -23,7 +18,7 @@ function NavBar() {
             <Link className={styles.links} to="/">Contact Us</Link>
         </div>
       </div>
-    </div >
+    // </div >
   );
 }
 export default NavBar;

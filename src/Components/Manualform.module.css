@@ -13,64 +13,66 @@
 .inputBox{
     margin-top: -5rem;
     width: 45%;
-    background-color:#75347f7a;
+    background-color :rgba(30, 110, 167, 0.45);
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.logoImg{
-    width:100px;
-}
 .image{
     width: 60%;
+    filter: drop-shadow(20px 0px 1rem rgba(2, 25, 61, 0.336));
 }
 .BannerTitle{
+    font-size: 1.1rem;
     font-weight: 500; 
+    color:rgb(11, 57, 90);
+    margin-top: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .Tag{
-    font-size: 80px;
+    font-size: 5rem;
     font-weight: bold;
     color: rgb(255, 255, 255);
     display: block;
-    margin-bottom: -20px;
-    margin-left: 80px;
+    margin-bottom: -1.4rem;
+    margin-left: 5rem;
 }
 .Title{
-    font-size: 30px;
+    font-size: 2rem;
     font-weight: 500;
     color: rgb(255, 255, 255);
     display: block;
-    margin-left: 185px;
+    margin-left: 10rem;
 }
 .FormBox{
     width: 70%;
-    margin: 30px auto;
+    margin: 2rem auto;
     display: flex;
     flex-direction: column;
 }
 textarea{
-    margin: 10px;
+    margin: 0.7rem;
     outline: none;
     border: none;
-    font-size: 15px;
-    border-radius: 5px;
-    padding: 10px;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    padding: 0.6rem;
 }
 
 .Button{
     width: 20%;
-    height: 40px;
+    height: 2.4rem;
     background-color: aliceblue;
-    border-radius: 10px;
+    border-radius: 0.4rem;
     border: none;
     align-self: flex-end;
-    margin-right: 100px;
+    margin-right: 6rem;
     cursor: pointer;
 }
 .Button:hover{
-    background-color: purple;
+    background-color:  rgb(37, 135, 205);
     color: white;
-    box-shadow: 0px 0px 10px rgba(90, 1, 90, 0.516);
+    box-shadow: 0px 0px 10px rgb(37, 135, 205);
     transition: 300ms ease-in-out;
     font-weight: 500;
 }

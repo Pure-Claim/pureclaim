@@ -1,32 +1,73 @@
-.landing {
-  width: 100%;
-  height: 90vh;
-  background-image: url(../Images/landingbg.png);
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+/* #2370A1--Heading
+ #446592--wall blue
+ #4A89AC--slight Light
+ #ACE5F6--skyblue
+ #E3FCF9 --very light blue
+ 
+ */
+.LandingPage{
+   width: 100%;
+   min-height: 85vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
-.button {
-  text-decoration: none;
-  border: 2px solid purple;
-  color:black;
-  padding: 10px 20px;
-  border-radius: 15px;
-  display: inline-block;
-  margin-top: 10px;
-  transition: transform 300ms ease-in-out;
+.BannerContent{
+    width: 50%;
+    padding-left: 3rem;
+}
+.BannerHead span{
+    display: block;
+    font-size: 4rem;
+    color: rgb(30, 110, 167);
+    font-family: sans-serif;
+    font-weight: 700;
+}
+.BannerTitle{
+  font-size: 1.3rem;
 }
 
-.button:hover {
-    background-color: purple;
-    color: white;
-    transition: 600ms ease-in-out;
+.BannerImageBox{
+    width: 40%;
 }
-.objective{
-background-color: purple;
-color: white;
+.BannerImage{
+    width: 80%;
+    filter: drop-shadow(15px 0px 10px rgba(59, 58, 58, 0.671));
 }
+.Objectives{
+    width: 100%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:  rgb(166, 214, 248);
+}
+.ObjHeading{
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+.ObjTitle{
+    font-size:1.5rem;
+    margin: 0px;
+    font-weight: 600;
+}
+.ObjBox{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    max-height: fit-content;
+}
+.ObjImg{
+    width: 20%;
+}
+.ObjImg img{
+    width: 100%;
+}
+.ObjContent{
+    font-size:1rem;
+    letter-spacing: 0.04rem;
+    width: 70%;
+}   

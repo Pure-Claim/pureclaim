@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Manualform.module.css";
-import bannerimg from "../Images/Form.png";
+import bannerimg from "../Images/Form1.png";
 
 function Manualform() {
   const [isLoading, setIsLoading] = useState(false);

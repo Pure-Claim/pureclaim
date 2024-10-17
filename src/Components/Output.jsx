@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import outputImg from "../Images/aboutImage.png";
+import outputImg from "../Images/Output.png";
 import styles from "./Output.module.css";
 import { useState } from "react";
 function Output() {

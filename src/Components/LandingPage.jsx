@@ -1,24 +1,49 @@
-import LandingImg from "../Images/Landingimg1.jpeg";
-import styles from "./LandingPage.module.css"
-import { Link } from "react-router-dom";
+import styles from "./LandingPage.module.css";
+import Banner from "../Images/Food.png";
 
 function LandingPage() {
   return (
     <>
-    <div className={styles.landing}>
-      <img src={LandingImg} className="LPimg" />
-      <h1 className="LPHeading">UNCOVERING FOOD FACTS</h1>
-      <h4>Fact Check Your Food : A simple Guide To Brand Claims</h4>
-      <Link className={`${styles.button} mb-5`} to="/ClaimCheckOptions">Check Claims</Link>
-    </div>
-    <div className={`${styles.objective} w-100 mx-auto p-5`}>
-        <div className="fs-1 fw-bold mt-3">
-            <center>OUR OBJECTIVE</center>
+      <div className={styles.LandingPage}>
+        <div className={styles.BannerContent}>
+          <h1 className={styles.BannerHead}>
+            <span>UNCOVERING </span>FOOD FACTS
+          </h1>
+          <span className={styles.BannerTitle}>
+            <span>Fact Check Your Food :</span> A simple Guide To Brand Claims
+          </span>
         </div>
-        <div  className="mt-3 text-center ">
-          <h3>"Trust What You Eat – Verify with Confidence!"</h3>
-          <p class="text-center">Empowering consumers to make informed, confident choices by providing an easy-to-use platform that verifies whether brand claims on edible items align with their ingredients.Our goal is to create a user-friendly space where consumers can easily cut through marketing jargon and confidently assess the authenticity of product claims. We are committed to enhancing awareness of what’s in the food we eat, promoting healthier choices, and supporting brands that prioritize honesty and transparency.</p>
+
+        <div className={styles.BannerImageBox}>
+          <img src={Banner} className={styles.BannerImage} />
         </div>
+      </div>
+
+      <div className={styles.Objectives}>
+        <h1 className={styles.ObjHeading}>Our Objectives</h1>
+
+        <p className={styles.ObjTitle}>
+          Trust What You Eat : Verify with Confidence!
+        </p>
+        <div className={styles.ObjBox}>
+          {/* <div className={styles.ObjImg}>
+            <img src={obj} />
+          </div> */}
+          <p className={styles.ObjContent}>
+            Empowering consumers to make informed, confident choices by
+            providing an easy-to-use platform that verifies whether brand claims
+            on edible items align with their ingredients.Our goal is to create a
+            user-friendly space where consumers can easily cut through marketing
+            jargon and confidently assess the authenticity of product claims. We
+            are committed to enhancing awareness of what’s in the food we eat,
+            promoting healthier choices, and supporting brands that prioritize
+            honesty and transparency.
+          </p>
+        </div>
+      </div>
+
+      <div > 
+
       </div>
     </>
   );

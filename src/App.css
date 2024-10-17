@@ -4,31 +4,11 @@
     url("./fonts/Poppins-Black.ttf") format("ttf");
 }
 body{
-  font-family: "Poppins",Verdana;
+  font-family: "Poppins",sans-serif;
   background-color: rgb(244, 244, 244);
-  background-image: url("./Images/Home.png");
-  background-size: cover;
-}
-.outletBox{
-  display: flex;
-  min-height: 90vh;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: rgb(244, 244, 244);
-  padding-bottom: 100px;
- background: none;
 }
 .image{
   width:100%;
-}
-
-.LPHeading{
-  font-weight: 600;
-  font-family: sans-serif;
-}
-.LPimg{
-  width: 30%;
 }
 .seeMore{
    border-radius: 30px;

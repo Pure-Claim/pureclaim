@@ -78,7 +78,8 @@ function ImageForm() {
       });
   };
 
-  return (
+  return (<div className={styles.formContainer}>
+ 
     <div className={styles.ImageForm}>
       <div className={styles.ImageUploadBox}>
         <div className={styles.MediaUploader}>
@@ -144,6 +145,8 @@ function ImageForm() {
         {" "}
         {isAnalyzing ? "Analyzing..." : "Analyze"}
       </button>
+    </div>
+
     </div>
   );
 }

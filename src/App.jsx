@@ -1,14 +1,15 @@
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./App.css";
 import NavBar from "./Components/NavBar";
+import LandingPage from "./Components/LandingPage";
+import ClaimCheckOptions from "./Components/ClaimCheckOptions";
 import { Outlet } from "react-router-dom";
 function App() {
   return (
     <>
-      <NavBar />
-      <div className="outletBox">
-        <Outlet />
-      </div>
+    <NavBar/>
+    <Outlet>
+    </Outlet>
     </>
   );
 }
