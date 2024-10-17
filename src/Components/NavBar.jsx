@@ -1,24 +1,53 @@
-import logo from "../Images/Logo.png";
+
 import styles from "./NavBar.module.css";
-import { Link } from "react-router-dom";
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from "react-router-dom";
+
 function NavBar() {
   const location = useLocation();
 
-  // Check if the current route is "/"
-  const isHome = location.pathname === "/";
   return (
       <div className={styles.navbar}>
        <p className={styles.PureClaim}>PureClaim</p>
         <div className={styles.navs}>
-            <Link  className={`${styles.links} ${styles.active} `} to="/">Home</Link>
-            <Link  className={styles.links} to="/">AboutUs</Link>
-            <Link className={styles.links} to="/ClaimCheckOptions">ClaimCheck</Link>
-            <Link className={styles.links} to="/">Blogs</Link>
-            <Link className={styles.links} to="/">Contact Us</Link>
+          <Link
+            className={`${styles.links}
+            // Only apply when path is "/" else none
+            ${location.pathname === "/" ? styles.active : ""}`}
+            to="/">
+            Home
+          </Link>
+          <Link
+            className={`${styles.links} 
+            // only apply when path is "/about"
+            ${location.pathname === "/about" ? styles.active : ""}`}
+            to="/about">
+            About Us
+          </Link>
+          <Link
+            className={`${styles.links} 
+            // only apply when path is "/ClaimCheckOptions"
+            ${location.pathname === "/ClaimCheckOptions" ? styles.active : ""}`}
+            to="/ClaimCheckOptions">
+            Claim Check
+          </Link>
+          <Link
+            className={`${styles.links}
+            // Only apply when path is "/blogs"
+            ${location.pathname === "/blogs" ? styles.active : ""}`}
+            to="/blogs">
+            Blogs
+          </Link>
+          <Link
+            className={`${styles.links}
+            // Only apply when path is "/contact"
+            ${location.pathname === "/contact" ? styles.active : ""}`}
+            to="/contact">
+            Contact Us
+          </Link>
         </div>
       </div>
     // </div >
   );
 }
+
 export default NavBar;

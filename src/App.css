@@ -4,7 +4,17 @@
     url("./fonts/Poppins-Black.ttf") format("ttf");
 }
 body{
-  font-family: "Poppins",sans-serif;
+  font-family: "Poppins",Verdana;
+  background-color: rgb(244, 244, 244);
+  background-image: url("./Images/Home.png");
+  background-size: cover;
+}
+.outletBox{
+  display: flex;
+  min-height: 90vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background-color: rgb(244, 244, 244);
 }
 .image{

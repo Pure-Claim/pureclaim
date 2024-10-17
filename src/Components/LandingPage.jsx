@@ -2,6 +2,23 @@ import styles from "./LandingPage.module.css";
 import Banner from "../Images/Food.png";
 
 function LandingPage() {
+  const features = [
+    {
+      img: f1,
+      title: "feature-1",
+      text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, maxime!",
+    },
+    {
+      img: f2,
+      title: "feature-1",
+      text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, maxime!",
+    },
+    {
+      img: f3,
+      title: "feature-1",
+      text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, maxime!",
+    },
+  ];
   return (
     <>
       <div className={styles.LandingPage}>
