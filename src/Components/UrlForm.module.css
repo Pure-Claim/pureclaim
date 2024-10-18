@@ -68,7 +68,7 @@
 .radioBtn{
     display: none;
 }
-.submitBtn{
+.submitBtn ,.analyzebtn{
     border: none;
     outline: none;
     padding: 0.8rem 1.8rem;
