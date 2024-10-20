@@ -1,16 +1,15 @@
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./App.css";
 import NavBar from "./Components/NavBar";
-import LandingPage from "./Components/LandingPage";
-import ClaimCheckOptions from "./Components/ClaimCheckOptions";
+import ContextWrapper from "./Store/ContextProvider"
 import { Outlet } from "react-router-dom";
 function App() {
   return (
-    <>
+    <ContextWrapper>
     <NavBar/>
     <Outlet>
     </Outlet>
-    </>
+    </ContextWrapper>
   );
 }
 

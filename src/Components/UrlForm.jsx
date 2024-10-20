@@ -6,6 +6,7 @@ import amazon from "../Images/amazon.png";
 import BigBasket from "../Images/BigBasket.png";
 import JioMart from "../Images/JioMart.png";
 import Blinkit from "../Images/Blinkit.png";
+
 function UrlForm() {
   const [url, setUrl] = useState("");
   const [selectedWebsite, setSelectedWebsite] = useState("");
@@ -53,9 +54,7 @@ function UrlForm() {
 
   return (
     <div className={styles.URLContainer}>
-      {/* <div  className={styles.bannerimg}>
-        <img src={banner} />
-      </div> */}
+     
       <div className={styles.UrlForm}>
         <input
           type="url"
@@ -67,6 +66,7 @@ function UrlForm() {
         />
 
         <div className={styles.websiteList}>
+  
           <label className={`${styles.WebsiteLabel}  ${selectedWebsite=="swiggy-instamart"? styles.selected  : "" }`}>
           <div className={styles.labelimg}>
               <img src={img}  />
@@ -168,7 +168,7 @@ function UrlForm() {
         {/* Disable button during loading */}
 
         {loading && <p>Analyzing...</p>}
-        {/* Loading state */}
+        
         {error && <p style={{ color: "red" }}>{error}</p>}
         {productData && (
           <div style={{ marginTop: "20px" }}>

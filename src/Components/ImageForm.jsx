@@ -2,8 +2,8 @@ import styles from "./ImageForm.module.css";
 import AddImg from "../Images/AddImage.png";
 import TextDisplay from "./ocr/TextDisplay";
 import { extractText } from "./ocr/textExtractor";
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { ContextProvider } from "../Store/ContextProvider";
 
 function ImageForm() {
   const [claimsFile, setClaimsFile] = useState(null);
@@ -14,9 +14,6 @@ function ImageForm() {
 
   const [ClaimLoading, setClaimLoading] = useState(false);
   const [Ingredientsloading, setIngredientsLoading] = useState(false);
-
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const navigate = useNavigate();
 
   const handleClaimsFileChange = (event) => {
     const file = event.target.files[0];
@@ -45,38 +42,10 @@ function ImageForm() {
     extractText(ingredientsFile, setIngredientsText, setIngredientsLoading);
   };
 
-  const handleAnalyse = () => {
-    if (claimsText === "" || ingredientsText === "") {
-      alert("Both Claims and Ingredients text must be provided!");
-      return;
-    }
+ 
 
-    const encodedClaim = encodeURIComponent(claimsText);
-    const encodedIngredients = encodeURIComponent(ingredientsText);
-    const apiUrl = `https://cwbackend-a3332a655e1f.herokuapp.com/claims/analyze?claim=${encodedClaim}&ingredients=${encodedIngredients}`;
-
-    setIsAnalyzing(true);
-    fetch(apiUrl, {
-      method: "GET",
-      headers: {
-        Accept: "application/json",
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        setIsAnalyzing(false);
-        console.log(data);
-        if (data) {
-          navigate("/ClaimCheckOptions/Manualform/Output", {
-            state: { data: data },
-          });
-        }
-      })
-      .catch(() => {
-        setIsAnalyzing(false);
-        alert("An error occurred during analysis.");
-      });
-  };
+  const {handleAnalyse,isAnalyzing}=useContext(ContextProvider);
+ 
 
   return (<div className={styles.formContainer}>
  
@@ -139,7 +108,7 @@ function ImageForm() {
 
       <button
         className={styles.ImgAnalyzebtn}
-        onClick={handleAnalyse}
+        onClick={()=>handleAnalyse(claimsText,ingredientsText)}
         disabled={isAnalyzing}
       >
         {" "}

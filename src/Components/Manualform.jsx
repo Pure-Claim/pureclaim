@@ -1,49 +1,20 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
 import styles from "./Manualform.module.css";
 import bannerimg from "../Images/Form1.png";
+import { ContextProvider } from "../Store/ContextProvider";
 
 function Manualform() {
-  const [isLoading, setIsLoading] = useState(false);
-  const navigate = useNavigate();
-  function handleAnalyse() {
+  const { isAnalyzing, handleAnalyse } = useContext(ContextProvider);
+
+  const ManualCheck = () => {
     const Claims = document.querySelector("#Claims").value;
     const Ingredients = document.querySelector("#Ingredients").value;
-    const Analysebtn = document.querySelector("#Analyse");
-
-    if (Claims == "" || Ingredients == "") {
-      alert("All Fields are mandatory!");
-      return;
-    }
-    const encodedClaim = encodeURIComponent(Claims);
-    const encodedIngredients = encodeURIComponent(Ingredients);
-    const apiUrl = `https://cwbackend-a3332a655e1f.herokuapp.com/claims/analyze?claim=${encodedClaim}&ingredients=${encodedIngredients}`;
-    setIsLoading(true);
-    fetch(apiUrl, {
-      method: "GET",
-      headers: {
-        Accept: "application/json",
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        setIsLoading(false);
-        console.log(data);
-        if (data) {
-          navigate("/ClaimCheckOptions/Manualform/Output", {
-            state: { data: data },
-          });
-        }
-      }).catch((error)=>{
-        console.log(error);
-        throw(error);
-      });
-  }
+    handleAnalyse(Claims, Ingredients);
+  };
 
   return (
     <div className={styles.CheckClaims}>
       <div className={styles.inputBox}>
-        {/* <img src={logo} className={styles.logoImg}/> */}
         <span className={styles.Tag}>UNCOVER</span>
         <span className={styles.Title}>The FACTS In Label</span>
 
@@ -65,10 +36,10 @@ function Manualform() {
         <button
           className={styles.Button}
           id="Analyse"
-          disabled={isLoading}
-          onClick={handleAnalyse}
+          disabled={isAnalyzing}
+          onClick={() => ManualCheck()}
         >
-          {isLoading ? `Checking...` : `Analyze`}
+          {isAnalyzing ? `Analyzing...` : `Analyze`}
         </button>
       </div>
 
