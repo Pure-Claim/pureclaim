@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./UrlForm.module.css";
 import img from "../Images/swiggy1.png";
 import zepto from "../Images/Zepto.png";
@@ -8,16 +9,53 @@ import JioMart from "../Images/JioMart.png";
 import Blinkit from "../Images/Blinkit.png";
 
 function UrlForm() {
+
   const [url, setUrl] = useState("");
   const [selectedWebsite, setSelectedWebsite] = useState("");
   const [error, setError] = useState(null);
   const [productData, setProductData] = useState(null);
   const [loading, setLoading] = useState(false);
+  const[Analyzing,setAnalyzing]=useState(false);
+ const navigate=useNavigate();
+  function handleAnalyse() {
+    const Claims = productData.productTitle;
+    const Ingredients = productData.ingredientsText;
+   
+    if (Claims == "" || Ingredients == "") {
+      alert("All Fields are mandatory!");
+      return;
+    }
+    const encodedClaim = encodeURIComponent(Claims);
+    const encodedIngredients = encodeURIComponent(Ingredients);
+    const apiUrl = `https://cwbackend-a3332a655e1f.herokuapp.com/claims/analyze?claim=${encodedClaim}&ingredients=${encodedIngredients}`;
+    setAnalyzing(true);
+    fetch(apiUrl, {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setAnalyzing(false);
+       
+        if (data) {
+          navigate("/ClaimCheckOptions/Manualform/Output", {
+            state: { data: data },
+          });
+        }
+      }).catch((error)=>{
+        console.log(error);
+        throw(error);
+      });
+    }
 
   const handleOptionChange=(e)=>{
     setSelectedWebsite(e.target.value);
     console.log(e.target.value)
   }
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     // Clear previous states and errors
@@ -41,7 +79,6 @@ function UrlForm() {
       if (response.ok) {
         // Store the extracted data in state
         setProductData(data);
-        console.log(data);
       } else {
         setError(data.error);
       }
@@ -157,14 +194,14 @@ function UrlForm() {
           </label>
 
         </div>
-        <button
+        {!productData && <button
           type="submit"
           disabled={loading}
           onClick={handleSubmit}
           className={styles.submitBtn}
         >
           Submit
-        </button>
+        </button>}
         {/* Disable button during loading */}
 
         {loading && <p>Analyzing...</p>}
@@ -181,6 +218,9 @@ function UrlForm() {
             </p>
           </div>
         )}
+        {productData && 
+        <button className={styles.analyzebtn} onClick={handleAnalyse}>{ Analyzing ? "Analyzing..." : "Analyze"}</button>
+}
       </div>
     </div>
   );
