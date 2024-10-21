@@ -1,3 +1,4 @@
+import { useTypewriter, Cursor } from "react-simple-typewriter";
 import styles from "./LandingPage.module.css";
 import Banner from "../Images/Food.png";
 import About from "../Images/FoodImg.png";
@@ -22,6 +23,14 @@ function LandingPage() {
       post: "Full Stack Developer",
     },
   ];
+
+  const [text] = useTypewriter({
+    words: [" A simple Guide To Brand Claims", " Verify with Confidence!","Unmasking Food Brand Claims","Check Food Claims Instantly","See What’s Really Inside","No More Misleading Labels"],
+    loop: true,
+    typeSpeed: 150,
+    deleteSpeed: 80,
+  });
+
   return (
     <>
       <div className={styles.LandingPage}>
@@ -30,7 +39,11 @@ function LandingPage() {
             <span>UNCOVERING </span>FOOD FACTS
           </h1>
           <span className={styles.BannerTitle}>
-            <span>Fact Check Your Food :</span> A simple Guide To Brand Claims
+            <span>
+              Fact Check Your Food :{" "}
+              {text}
+            </span>{" "}
+            <Cursor />
           </span>
         </div>
 
@@ -46,7 +59,6 @@ function LandingPage() {
           Trust What You Eat : Verify with Confidence!
         </p>
         <div className={styles.ObjBox}>
-          
           <p className={styles.ObjContent}>
             Empowering consumers to make informed, confident choices by
             providing an easy-to-use platform that verifies whether brand claims
@@ -89,8 +101,8 @@ function LandingPage() {
         </h1>
 
         <div className={styles.Team}>
-          {TeamDetails.map((member)=>(
-            <Member key={member.name} name={member.name} post={member.post}/>
+          {TeamDetails.map((member) => (
+            <Member key={member.name} name={member.name} post={member.post} />
           ))}
         </div>
       </div>
